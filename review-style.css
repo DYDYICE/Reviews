@@ -1,0 +1,86 @@
+:root {
+  --gap: 16px;
+  --border: 1px solid #e5e5e5;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 32px auto;
+  color: #222;
+  line-height: 1.45;
+}
+
+h1, h2 { text-align: center; margin: 0 0 12px; }
+
+.section {
+  padding: 20px;
+  border: var(--border);
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+
+label { display: block; margin-top: 12px; font-weight: 600; }
+
+textarea, input, select, button {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  outline: none;
+}
+
+textarea:focus, input:focus, select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+/* Buttons */
+button {
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 16px;
+  border: none;
+}
+button:hover { background: #444; }
+
+/* Layout */
+.row { display: grid; gap: var(--gap); grid-template-columns: 1fr 1fr; }
+.review-list { margin-top: 20px; }
+.review-item { border-top: 1px solid #eee; padding: 12px 0; display: grid; grid-template-columns: 1fr; gap: 8px; }
+.review-head { display: grid; gap: 12px; grid-template-columns: 60px 1fr 1fr 1fr 60px; align-items: center; }
+.review-text { background: #fafafa; padding: 10px; border-radius: 8px; white-space: pre-wrap; }
+.small { font-size: 13px; }
+.muted { color: #666; font-style: italic; }
+.delete-btn { background: #c00; color: #fff; border-radius: 6px; padding: 6px 8px; }
+.delete-btn:hover { background: #e33; }
+.edit-btn { background: #007bff; color: #fff; border-radius: 6px; padding: 6px 8px; }
+.edit-btn:hover { background: #2196f3; }
+
+/* Scroll to QRG */
+#scrollToQRG {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #222;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+#scrollToQRG:hover { background: #444; }
+
+@media (max-width: 680px) {
+  .row { grid-template-columns: 1fr; }
+  .review-head { grid-template-columns: 1fr; }
+}
