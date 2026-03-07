@@ -1,0 +1,172 @@
+:root {
+  --gap: 16px;
+  --border: 1px solid #e5e5e5;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 32px auto;
+  color: #222;
+  line-height: 1.45;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.section {
+  padding: 20px;
+  border: var(--border);
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+textarea,
+input,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  outline: none;
+  box-sizing: border-box;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+/* Buttons */
+button {
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 16px;
+  border: none;
+}
+
+button:hover {
+  background: #444;
+}
+
+/* Main layout */
+.row {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  align-items: start;
+}
+
+.row > div {
+  min-width: 0;
+}
+
+#reviewStats {
+  margin-top: 20px;
+  padding: 12px 14px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+#reviewList {
+  margin-top: 20px;
+}
+
+.review-item {
+  border-top: 1px solid #eee;
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.review-head {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 60px 120px 90px 180px 140px 100px;
+  align-items: center;
+}
+
+.review-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+  color: #555;
+}
+
+.review-text {
+  background: #fafafa;
+  padding: 10px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+}
+
+.small {
+  font-size: 13px;
+}
+
+.muted {
+  color: #666;
+  font-style: italic;
+}
+
+.delete-btn {
+  background: #c00;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+.delete-btn:hover {
+  background: #e33;
+}
+
+.edit-btn {
+  background: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+.edit-btn:hover {
+  background: #2196f3;
+}
+
+#flagsRow label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+#flagsRow input[type="checkbox"] {
+  width: auto;
+  margin-top: 0;
+}
+
+@media (max-width: 680px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .review-head {
+    grid-template-columns: 1fr;
+  }
+}
